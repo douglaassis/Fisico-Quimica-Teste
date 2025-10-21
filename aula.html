@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aula de Físico‑Química — Graduação (com imagens embutidas)</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    :root{
+      --bg:#f5f7fa; --card:#ffffff; --accent:#0369a1; --muted:#475569; --success:#10b981; --danger:#ef4444;
+      --radius:12px; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color-scheme: light;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b1220}
+    .wrap{max-width:1100px;margin:28px auto;padding:22px;background:var(--card);border-radius:14px;box-shadow:0 6px 28px rgba(2,6,23,0.08)}
+    header{display:flex;align-items:center;gap:14px}
+    header h1{margin:0;font-size:22px;color:var(--accent)}
+    header p{margin:0;color:var(--muted);font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:14px}
+    .card{background:var(--card);padding:16px;border-radius:10px;border:1px solid #e6eef6}
+    img.illu{width:100%;border-radius:8px;display:block}
+    h2{color:var(--accent);margin-top:0}
+    .section{display:grid;gap:12px;margin-top:12px}
+    .note{background:#f1f5f9;padding:10px;border-radius:8px;color:var(--muted)}
+    .exercise{border-left:6px solid rgba(3,105,161,0.12);padding:12px;border-radius:8px;background:#fbfcfd;margin-top:10px}
+    .options{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .opt{padding:10px 12px;border-radius:8px;background:#f1f5f9;border:1px solid #dbeafe;cursor:pointer;text-align:left}
+    .opt.correct{background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.6)}
+    .opt.wrong{background:rgba(239,68,68,0.12);border-color:rgba(239,68,68,0.6)}
+    .explain{display:none;margin-top:10px;padding:10px;border-radius:8px;background:#f8fafc;color:var(--muted)}
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+    .share{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:8px 12px;border-radius:999px;color:#fff;text-decoration:none;font-weight:600}
+    .legend{font-size:13px;color:#475569;margin-top:8px;text-align:center}
+    code{background:#eef2ff;padding:2px 6px;border-radius:6px;color:#003b6f}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} .wrap{margin:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'><rect rx='6' width='24' height='24' fill='%23036b99'/><g fill='white' transform='translate(4,4)'><circle cx='4' cy='4' r='3'/><rect x='9' y='2' width='6' height='4' rx='1'/></g></svg>" alt="logo" width="56" style="border-radius:8px">
+      <div>
+        <h1>Aula de Físico‑Química — Graduação</h1>
+        <p>Nível: graduação • Conteúdo: Termodinâmica, Cinética, Equilíbrio, Eletroquímica</p>
+      </div>
+    </header>
+
+    <div class="hero">
+      <section class="card">
+        <h2>1. Termodinâmica</h2>
+        <p>A termodinâmica descreve a energia e suas transformações. A primeira lei é a conservação de energia:</p>
+        <p>\(\Delta U = Q - W\). Em processos a pressão constante, a entalpia \(H = U + pV\) é frequentemente usada e \(\Delta H = Q_p\).</p>
+
+        <!-- Imagem SVG embutida representando um ciclo termodinâmico simples -->
+        <img class="illu" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='300'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%2306b6d4'/><stop offset='1' stop-color='%237c3aed'/></linearGradient></defs><rect width='100%' height='100%' fill='%23f8fafc'/><g transform='translate(60,40)'><path d='M0 160 C80 20 240 20 320 160' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round'/><circle cx='0' cy='160' r='6' fill='%23036b99'/><circle cx='320' cy='160' r='6' fill='%237c3aed'/><text x='0' y='190' font-size='14' fill='%23333'>Estado A</text><text x='300' y='190' font-size='14' fill='%23333'>Estado B</text><text x='110' y='40' font-size='13' fill='%23666'>Trabalho (W)</text></g></svg>" alt="Ciclo termodinâmico">
+        <div class="legend">Figura 1 — Diagrama esquemático: transformação entre estados com troca de calor e trabalho.</div>
+
+        <div class="exercise" data-id="1">
+          <strong>Exercício 1</strong>
+          <p>Num processo, o sistema recebe \(Q = 500\,J\) e realiza \(W = 150\,J\). Qual o valor de \(\Delta U\)?</p>
+          <div class="options">
+            <button class="opt" data-correct="false" data-explain="Cálculo: ΔU = Q - W = 500 - 150 = 350 J">A) 350 J</button>
+            <button class="opt" data-correct="true" data-explain="Correto: ΔU = Q - W = 500 - 150 = 350 J">B) 350 J</button>
+            <button class="opt" data-correct="false" data-explain="500 J é o calor recebido, não a variação de U">C) 500 J</button>
+            <button class="opt" data-correct="false" data-explain="150 J é o trabalho realizado, não ΔU">D) 150 J</button>
+          </div>
+          <div class="explain"></div>
+        </div>
+
+        <p style="margin-top:10px">Nota: Em muitos contextos didáticos, assume-se apenas trabalho PV; para casos gerais verifique sinais e convenções.</p>
+      </section>
+
+      <aside class="card">
+        <h3>Sumário Rápido</h3>
+        <div class="note">Use <code>ΔG = ΔH - TΔS</code> para espontaneidade a T e p constantes. Revise a definição de sistema e arredores.</div>
+      </aside>
+    </div>
+
+    <section class="card section">
+      <h2>2. Cinética Química</h2>
+      <p>A cinética descreve a velocidade das reações e seus mecanismos. A equação de Arrhenius:</p>
+      <p>\(k = A e^{-E_a/(RT)}\), onde \(E_a\) é a energia de ativação.</p>
+
+      <!-- SVG ativação -->
+      <img class="illu" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='300'><rect width='100%' height='100%' fill='%23fbfdff'/><g transform='translate(60,40)'><path d='M0 180 L70 140 L160 80 L300 120 L430 40 L540 140' fill='none' stroke='%23036b99' stroke-width='4' stroke-linecap='round'/><line x1='160' y1='80' x2='430' y2='40' stroke='%237c3aed' stroke-dasharray='6 4'/><text x='170' y='70' fill='%23333' font-size='13'>Ea</text><text x='10' y='200' fill='%23666' font-size='13'>Reagentes</text><text x='520' y='200' fill='%23666' font-size='13'>Produtos</text></g></svg>" alt="Energia de ativação">
+      <div class="legend">Figura 2 — Esquema qualitativo da energia de ativação entre reagentes e produtos.</div>
+
+      <div class="exercise" data-id="2">
+        <strong>Exercício 2</strong>
+        <p>Se a temperatura aumenta, o que acontece com a constante de velocidade \(k\)?</p>
+        <div class="options">
+          <button class="opt" data-correct="true" data-explain="Aumentando T, mais moléculas superam Ea: k aumenta." >A) Aumenta</button>
+          <button class="opt" data-correct="false" data-explain="Diminui somente se T diminuir." >B) Diminui</button>
+          <button class="opt" data-correct="false" data-explain="Mantém-se igual apenas em condições muito específicas." >C) Mantém-se igual</button>
+          <button class="opt" data-correct="false" data-explain="Depende também de catalisadores, mas em geral aumenta com T." >D) Depende apenas do catalisador</button>
+        </div>
+        <div class="explain"></div>
+      </div>
+
+      <p class="note">Exemplo: duplicar T não duplica k — depende exponencialmente de \(E_a/(RT)\).</p>
+    </section>
+
+    <section class="card section">
+      <h2>3. Equilíbrio Químico</h2>
+      <p>No equilíbrio, as velocidades direta e inversa são iguais. A constante de equilíbrio em termos de concentração é:</p>
+      <p>\(K_c = \dfrac{[C]^c [D]^d}{[A]^a [B]^b}\)</p>
+
+      <!-- SVG equilibrio -->
+      <img class="illu" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='260'><rect width='100%' height='100%' fill='%23fcfeff'/><g transform='translate(40,20)'><rect x='0' y='30' width='300' height='160' rx='10' fill='%23e6f7ff' stroke='%2306b6d4' /><text x='20' y='60' font-size='14' fill='%23033'>Concentração de reagentes ↓</text><text x='20' y='90' font-size='14' fill='%23033'>Concentração de produtos ↑</text><line x1='320' y1='110' x2='560' y2='110' stroke='%237c3aed' stroke-width='4' marker-end='url(#arrow)'/></g><defs><marker id='arrow' viewBox='0 0 10 10' refX='5' refY='5' markerWidth='6' markerHeight='6' orient='auto'><path d='M 0 0 L 10 5 L 0 10 z' fill='%237c3aed'/></marker></defs></svg>" alt="Equilíbrio químico">
+      <div class="legend">Figura 3 — Esquema ilustrativo do deslocamento de equilíbrio.</div>
+
+      <div class="exercise" data-id="3">
+        <strong>Exercício 3</strong>
+        <p>Aplicando um aumento da concentração de produtos, o sistema reage segundo Le Châtelier para:</p>
+        <div class="options">
+          <button class="opt" data-correct="false" data-explain="Se a concentração de produtos aumenta, o sistema tende a consumir produtos, deslocando para a esquerda.">A) Aumentar ainda mais a produção de produtos</button>
+          <button class="opt" data-correct="true" data-explain="Correto: o equilíbrio desloca-se para a esquerda (formando reagentes) para contrariar a perturbação.">B) Formar mais reagentes (desloca-se para a esquerda)</button>
+          <button class="opt" data-correct="false" data-explain="Nem sempre permanece inalterado — haverá resposta do sistema." >C) Não se altera</button>
+          <button class="opt" data-correct="false" data-explain="Depende de temperatura e pressão, mas pela adição direta, tende a esquerda." >D) Depende somente da pressão</button>
+        </div>
+        <div class="explain"></div>
+      </div>
+
+      <p class="note">Relacionar \(\Delta G^\circ\) com a constante de equilíbrio: \(\Delta G^\circ = -RT \ln K\).</p>
+    </section>
+
+    <section class="card section">
+      <h2>4. Eletroquímica</h2>
+      <p>A eletroquímica trata da conversão entre energia química e elétrica. Em células galvânicas, a oxidação ocorre no ânodo e a redução no cátodo.</p>
+
+      <!-- SVG celula galvanica -->
+      <img class="illu" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='320'><rect width='100%' height='100%' fill='%23fbfcff'/><g transform='translate(40,30)'><rect x='0' y='40' width='220' height='180' rx='12' fill='%23fff7ed' stroke='%23f59e0b'/><rect x='300' y='40' width='220' height='180' rx='12' fill='%23eef2ff' stroke='%23036b99'/><text x='40' y='30' font-size='14' fill='%23333'>Ânodo (oxidação)</text><text x='340' y='30' font-size='14' fill='%23333'>Cátodo (redução)</text><line x1='220' y1='130' x2='300' y2='130' stroke='%234b5563' stroke-width='3' stroke-dasharray='6 4'/><text x='230' y='120' font-size='12' fill='%23666'>Ponte salina</text></g></svg>" alt="Célula galvânica">
+      <div class="legend">Figura 4 — Esquema de uma célula galvânica simplificada.</div>
+
+      <div class="exercise" data-id="4">
+        <strong>Exercício 4</strong>
+        <p>Em uma pilha galvânica, para onde fluem os elétrons no circuito externo?</p>
+        <div class="options">
+          <button class="opt" data-correct="true" data-explain="Os elétrons são gerados na oxidação (ânodo) e fluem pelo circuito externo até o cátodo, onde ocorre redução.">A) Do ânodo para o cátodo</button>
+          <button class="opt" data-correct="false" data-explain="Fluxo oposto: não é do cátodo para o ânodo." >B) Do cátodo para o ânodo</button>
+          <button class="opt" data-correct="false" data-explain="Elétrons não circulam pela ponte salina; íons se movem por ela." >C) Pela ponte salina</button>
+          <button class="opt" data-correct="false" data-explain="Elétrons não fluem alternadamente no circuito estável." >D) Alternadamente</button>
+        </div>
+        <div class="explain"></div>
+      </div>
+
+      <p class="note">Potenciais-padrão: \(E_{cel}^\circ = E_{red}^\circ(cátodo) - E_{red}^\circ(ânodo)\). Use tabelas padrão para valores de redução.</p>
+    </section>
+
+    <footer>
+      <div>Feito com atenção — imagens embutidas para carregar mesmo offline.</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="share" id="openBtn" href="#">Abrir em nova aba</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // comportamento das opções (4 alternativas por exercício)
+    document.querySelectorAll('.exercise').forEach(ex => {
+      const opts = ex.querySelectorAll('.opt');
+      opts.forEach(btn => btn.addEventListener('click', (e) => {
+        if (ex.dataset.answered === 'true') return; // já respondido
+        ex.dataset.answered = 'true';
+        opts.forEach(b => b.style.pointerEvents = 'none');
+        const correct = btn.dataset.correct === 'true';
+        const explainEl = ex.querySelector('.explain');
+        if (correct) {
+          btn.classList.add('correct');
+          explainEl.style.display = 'block';
+          explainEl.style.borderLeft = '4px solid var(--success)';
+          explainEl.innerHTML = '<strong>Correto.</strong> ' + btn.dataset.explain;
+        } else {
+          btn.classList.add('wrong');
+          // destacar correta
+          opts.forEach(b => { if (b.dataset.correct === 'true') b.classList.add('correct'); });
+          explainEl.style.display = 'block';
+          explainEl.style.borderLeft = '4px solid var(--danger)';
+          explainEl.innerHTML = '<strong>Explicação:</strong> ' + btn.dataset.explain;
+        }
+      }));
+    });
+
+    // abrir em nova aba (gera blob com HTML atual)
+    document.getElementById('openBtn').addEventListener('click', function(ev){
+      ev.preventDefault();
+      const html = '<!doctype html>\\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
